@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.gp.ipmonitor.command.service.impl;
+package com.gp.ipmonitor.command.service;
 
 import com.gp.ipmonitor.model.IPConfigSystemModel;
 

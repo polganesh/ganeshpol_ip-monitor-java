@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gp.ipmonitor.command.rest.validator.IPConfigSystemModelValidator;
-import com.gp.ipmonitor.command.service.impl.IAddIPConfigService;
+import com.gp.ipmonitor.command.service.IAddIPConfigService;
 import com.gp.ipmonitor.model.IPConfigSystemModel;
 
 /**
