@@ -12,4 +12,6 @@ public interface IGetIpConfigDetailsForSystemService {
 	boolean isSystemIdPresent(String systemId);
 	
 	boolean isIpBlacklistedForSystem(String systemId,String blacklistedIp) ;
+	
+	String[] getBlacklistedIpForSystem(String systemId);
 }
