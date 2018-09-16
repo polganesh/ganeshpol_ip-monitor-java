@@ -1,5 +1,5 @@
 {
-  "family": "ip-monitor-awsEcs-task-dev",
+  "family": "ip-monitor-awsEcs-task-devenv",
   "volumes": [
 		{
 			"name": "efsSharedVolume",
@@ -16,7 +16,7 @@
 	  "essential": true,
 	  "portMappings": [
         {
-          "containerPort": 8080
+          "containerPort": 80
         }
       ],
 	  "mountPoints": [
