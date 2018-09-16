@@ -1,5 +1,5 @@
 {
-  "family": "ip-monitor-awsEcs-task-devenv",
+  "family": "ip-monitor-awsEcs-task-dev",
   "volumes": [
 		{
 			"name": "efsSharedVolume",
