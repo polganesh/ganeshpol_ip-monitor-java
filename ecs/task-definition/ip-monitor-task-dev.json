@@ -1,0 +1,33 @@
+{
+  "family": "ip-monitor-awsEcs-task-dev",
+  "volumes": [
+		{
+			"name": "/home/ec2-user/apps/data/ip-monitor/",
+			"host": {"sourcePath": "/home/ec2-user/apps/data/ip-monitor/"}
+		}
+	],
+  
+  "containerDefinitions": [
+    {
+      "name": "ip-monitor-dev",
+      "image": "903856756733.dkr.ecr.eu-central-1.amazonaws.com/deutschefin/ip-monitor:dev",
+      "cpu": 512,
+      "memoryReservation": 512,
+	  "essential": true,
+	  "portMappings": [
+        {
+          "containerPort": 8080
+        }
+      ],
+	  "mountPoints": [
+        {
+          "sourceVolume": "/home/ec2-user/apps/data/ip-monitor/",
+          "containerPath": "/home/ec2-user/apps/data/ip-monitor/"
+		  "readOnly": false
+        }
+      ]
+      
+    }
+  ]
+}
+

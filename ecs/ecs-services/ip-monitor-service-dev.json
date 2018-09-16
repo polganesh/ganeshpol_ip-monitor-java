@@ -1,0 +1,16 @@
+{
+  "cluster" : "ecs-euc1-dev-deutschefin-vpc001-ipmon-001",
+  "serviceName" : "ip-monitor-awsEcs-service-dev", 
+  "taskDefinition" : "ip-monitor-awsEcs-task-dev",
+  "loadBalancers" : [ {
+    "targetGroupArn": "arn:aws:elasticloadbalancing:eu-central-1:903856756733:targetgroup/tgp-euc1-dev-dfin-ipmon-001/3b44610f84836c8b",
+    "containerName" : "ip-monitor-dev",
+    "containerPort" : 8080
+  } ],
+  "role" : "rol-glob-n-deutschefin-ecs-001",
+  "desiredCount" : 1,
+  "deploymentConfiguration" : {
+    "maximumPercent" : 100,
+    "minimumHealthyPercent" : 0
+  }
+}
