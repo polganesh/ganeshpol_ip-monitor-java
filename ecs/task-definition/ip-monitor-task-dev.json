@@ -2,7 +2,7 @@
   "family": "ip-monitor-awsEcs-task-dev",
   "volumes": [
 		{
-			"name": "/home/ec2-user/apps/data/ip-monitor/",
+			"name": "efsSharedVolume",
 			"host": {"sourcePath": "/home/ec2-user/apps/data/ip-monitor/"}
 		}
 	],
@@ -21,7 +21,7 @@
       ],
 	  "mountPoints": [
         {
-          "sourceVolume": "/home/ec2-user/apps/data/ip-monitor/",
+          "sourceVolume": "efsSharedVolume",
           "containerPath": "/home/ec2-user/apps/data/ip-monitor/",
 		  "readOnly": false
         }
