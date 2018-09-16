@@ -1,7 +1,7 @@
 {
   "cluster" : "ecs-euc1-dev-deutschefin-vpc001-ipmon-001",
   "serviceName" : "ip-monitor-awsEcs-service-dev", 
-  "taskDefinition" : "ip-monitor-awsEcs-task-dev",
+  "taskDefinition" : "ip-monitor-awsEcs-task-dev:2",
   "loadBalancers" : [ {
     "targetGroupArn": "arn:aws:elasticloadbalancing:eu-central-1:903856756733:targetgroup/tgp-euc1-dev-dfin-ipmon-001/3b44610f84836c8b",
     "containerName" : "ip-monitor-dev",
