@@ -3,7 +3,7 @@
   "serviceName" : "ip-monitor-awsEcs-service-dev", 
   "taskDefinition" : "arn:aws:ecs:eu-central-1:903856756733:task-definition/ip-monitor-awsEcs-task-devenv:2",
   "loadBalancers" : [ {
-    "targetGroupArn": "arn:aws:elasticloadbalancing:eu-central-1:903856756733:targetgroup/tgp-euc1-dev-dfin-ipmon-001/3b44610f84836c8b",
+    "targetGroupArn": "arn:aws:elasticloadbalancing:eu-central-1:903856756733:targetgroup/tgp-euc1-dev-dfin-ipmon-002/ed1e73c94c31632d",
     "containerName" : "ip-monitor-dev",
     "containerPort" : 8080
   } ],
