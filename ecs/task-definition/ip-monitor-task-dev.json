@@ -3,7 +3,7 @@
   "volumes": [
 		{
 			"name": "efsSharedVolume",
-			"host": {"sourcePath": "/home/ec2-user/apps/data/ip-monitor/"}
+			"host": {"sourcePath": "/data/efs/generic/"}
 		}
 	],
   
@@ -23,7 +23,7 @@
 	  "mountPoints": [
         {
           "sourceVolume": "efsSharedVolume",
-          "containerPath": "/home/ec2-user/apps/data/ip-monitor/",
+          "containerPath": "/data/efs/generic/",
 		  "readOnly": false
         }
       ]
