@@ -22,7 +22,7 @@
 	  "mountPoints": [
         {
           "sourceVolume": "/home/ec2-user/apps/data/ip-monitor/",
-          "containerPath": "/home/ec2-user/apps/data/ip-monitor/"
+          "containerPath": "/home/ec2-user/apps/data/ip-monitor/",
 		  "readOnly": false
         }
       ]
