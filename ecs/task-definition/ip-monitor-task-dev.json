@@ -3,7 +3,7 @@
   "volumes": [
 		{
 			"name": "efsSharedVolume",
-			"host": {"sourcePath": "/data/efs/generic/"}
+			"host": {"sourcePath": "/efs/"}
 		}
 	],
   
@@ -23,7 +23,7 @@
 	  "mountPoints": [
         {
           "sourceVolume": "efsSharedVolume",
-          "containerPath": "/data/efs/generic/",
+          "containerPath": "/efs/",
 		  "readOnly": false
         }
       ]
