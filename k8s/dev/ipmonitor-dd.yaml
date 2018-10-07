@@ -13,9 +13,23 @@ spec:
     metadata:
       labels:
         app: ipmonitor
-    spec:
+    metadata:
+  name: ipmonitor
+  labels:
+    app: ipmonitor
       containers:
       - name: ipmonitor
         image: ipmonitor.azurecr.io:dev
         ports:
         - containerPort: 8080
+---
+apiVersion: v1
+kind: Service	
+metadata:
+  name: ipmonitor
+spec:
+	ports:
+	- port: 8080
+	selector:
+	app: ipmonitor
+  
