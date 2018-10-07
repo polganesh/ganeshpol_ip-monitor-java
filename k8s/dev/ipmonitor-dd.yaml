@@ -16,12 +16,13 @@ spec:
     spec:
       containers:
       - name: ipmonitor
-        image: ipmonitor.azurecr.io:dev
+        image: ipmonitor.azurecr.io/ipmonitor:dev
         ports:
         - containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
+type: LoadBalancer
 metadata:
   name: ipmonitor
 spec:
