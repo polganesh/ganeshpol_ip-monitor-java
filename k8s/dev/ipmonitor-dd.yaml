@@ -19,3 +19,16 @@ spec:
         image: ipmonitor.azurecr.io:dev
         ports:
         - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ipmonitor
+spec:
+  selector:
+    app: ipmonitor
+    tier: backend
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: http
