@@ -22,10 +22,10 @@ spec:
 ---
 kind: Service
 apiVersion: v1
-type: LoadBalancer
 metadata:
   name: ipmonitor
 spec:
+  type: LoadBalancer
   selector:
     app: ipmonitor
   ports:
