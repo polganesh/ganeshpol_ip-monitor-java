@@ -1,11 +1,11 @@
-apiVersion: ipmonitor/dev
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ipmonitor
   labels:
     app: ipmonitor
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: ipmonitor
