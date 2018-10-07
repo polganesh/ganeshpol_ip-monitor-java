@@ -27,7 +27,6 @@ metadata:
 spec:
   selector:
     app: ipmonitor
-    tier: backend
   ports:
   - protocol: TCP
     port: 8080
