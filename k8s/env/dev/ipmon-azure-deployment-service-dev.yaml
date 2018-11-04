@@ -1,0 +1,47 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ipmon-deployment
+  name: ipmon-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: ipmon-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: ipmon-deployment
+    spec:
+      containers:
+      - args:
+        - –replicas=3
+        image: ipmon.azurecr.io/ipmon:dev
+        name: ipmon-deployment
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ipmon-deployment
+  name: ipmon-deployment
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: ipmon-deployment
+  type: LoadBalancer
+status:
+  loadBalancer: {}
